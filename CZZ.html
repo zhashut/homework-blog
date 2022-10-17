@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创作者中心</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            overflow: hidden;
+            height: 86px;
+            /* background-attachment:scroll; */
+            background-color: #242424;
+        }
+
+        .logo {
+            float: left;
+            width: 205px;
+            height: 47px;
+            padding-left: 95px;
+            margin: 16.5px 0;
+        }
+
+        .nav {
+            height: 86px;
+            float: left;
+        }
+
+        .nav ul li {
+            float: left;
+            padding-left: 50px;
+            line-height: 86px;
+        }
+
+        .nav ul li a {
+            display: block;
+            height: 86px;
+            font-size: 17px;
+            color: #c1cccc;
+        }
+
+        .nav ul li a:hover {
+            background-color: #000000;
+            color: #fff;
+        }
+
+        .search {
+            float: left;
+            width: 200px;
+            height: 86px;
+        }
+
+        .search input {
+            width: 200px;
+            height: 43px;
+            margin-top: 22px;
+            margin-left: 50px;
+            padding-left: 25px;
+            padding-top: 1.5px;
+            color: #9ba8c5;
+            border: 0px;
+            border: 1px solid #4f4f4f;
+            box-sizing: border-box;
+            border-radius: 32px;
+            background-image: url(../作品/img/search.png);
+            background-repeat: no-repeat;
+            background-position: 5px 11px;
+        }
+        .certor {
+            float: left;
+            width: 150px;
+            height: 86px;
+        }
+
+        .header .tx {
+            display: inline-block;
+            padding-left: 50px;
+            margin-top: 18px;
+        }
+        .header .tx ul li {
+            position: relative;
+        }
+
+        .header .tx ul li #ul2 {
+            display: none;
+            position: absolute;
+            width: 120px;
+            height: 275px;
+            background-color: #2b2b2b;
+        }
+
+        .header .tx ul li #ul2 li {
+            height: 40px;
+            padding-left: 25px;
+        }
+
+        .header .tx ul li #ul2 li a {
+            color: #717171;
+        }
+
+        .header .tx ul li #ul2 li a:hover {
+            color: #fff;
+            opacity: 1;
+            background-color: rgba(53, 53, 53, .1);
+        }
+
+        .header .tx ul li:hover #ul2 {
+            display: inline-block;
+        }
+
+        .certor a {
+            display: inline-block;
+            width: 114px;
+            height: 43px;
+            line-height: 38px;
+            padding-left: 16px;
+            margin-top: 23px;
+            margin-left: 70px;
+            color: #ccc;
+            background-color: #242424;
+            border: 1px solid #4f4f4f;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+
+        .certor a:hover {
+            opacity: 1;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            transition: all 0.3s ease 0s;
+        }
+
+        .header p a {
+            float: right;
+            color: #787878;
+            line-height: 86px;
+            padding-right: 135px;
+        }
+
+        .header p a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .header .tx {
+            display: inline-block;
+            padding-left: 50px;
+            margin-top: 18px;
+        }
+
+        .header .tx:hover {
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) .1);
+            opacity: 0.6;
+            transition: opacity 0.5s ease;
+        }
+
+        .red {
+            height: 10px;
+            background-color: #c20c0c;
+        }
+
+        h1 {
+            margin-top: calc(18vh - 27px);
+            margin-bottom: 12px;
+            font-weight: 300;
+            margin-left: 644px;
+            font-size: 50px;
+            margin-top: 100px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #939393;
+            margin-left: 685px;
+            margin-top: 20px;
+        }
+
+        .sing {
+            overflow: hidden;
+            height: 570px;
+            position: relative;
+            background-color: #f5f5f5
+        }
+
+        .sing h2 {
+            padding-top: 30px;
+            padding-left: 70px;
+            color: #FFF;
+        }
+
+        .sing .events {
+            overflow: hidden;
+            position: absolute;
+            width: 1470px;
+            height: 405px;
+            margin: 25px 70px;
+            /* background-color: #16151a; */
+        }
+
+        .event1 {
+            overflow: hidden;
+            float: left;
+            width: 350px;
+            margin-top: 30px;
+            height: 300px;
+            margin-left: 150px;
+            border-radius: 10px;
+            background-color: #fff;
+            background-image: url(../作品/img/wy1.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .event1 h2 {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 100px;
+            padding-left: 22px;
+        }
+
+        .event1 p {
+            color: #bfbfbf;
+            padding-left: 22px;
+        }
+
+        .event1 h1 {
+            color: #fff;
+            font-size: 26px;
+            margin-top: 20px;
+            padding-left: 22px;
+            font-weight: 400;
+            transition: all 0.3s ease 0s;
+        }
+
+        .event1 .last {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 20px;
+        }
+
+        .event2 {
+            overflow: hidden;
+            float: left;
+            width: 350px;
+            height: 300px;
+            margin-left: 41px;
+            margin-top: 30px;
+            border-radius: 10px;
+            background-color: #fff;
+            background-image: url(../作品/img/wy2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            /* transition: all 0.3s ease 0s; */
+        }
+
+        .event2 h2 {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 100px;
+            padding-left: 22px;
+        }
+
+        .event2 p {
+            color: #bfbfbf;
+            padding-left: 22px;
+        }
+
+        .event2 h1 {
+            color: #fff;
+            font-size: 26px;
+            margin-top: 20px;
+            padding-left: 22px;
+            font-weight: 400;
+            transition: all 0.3s ease 0s;
+        }
+
+        .event2 .last {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 20px;
+        }
+
+        .event3 {
+            overflow: hidden;
+            float: left;
+            width: 350px;
+            height: 300px;
+            margin-left: 41px;
+            margin-top: 30px;
+            border-radius: 10px;
+            background-color: #fff;
+            background-image: url(../作品/img/wy3.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            /* transition: all 0.3s ease 0s; */
+        }
+
+        .event3 h2 {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 100px;
+            padding-left: 22px;
+        }
+
+        .event3 p {
+            color: #bfbfbf;
+            padding-left: 22px;
+        }
+
+        .event3 h1 {
+            color: #fff;
+            font-size: 26px;
+            margin-top: 20px;
+            padding-left: 22px;
+            font-weight: 400;
+            transition: all 0.3s ease 0s;
+        }
+
+        .event3 .last {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 20px;
+        }
+
+        .event1:hover {
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) .1);
+            opacity: 0.6;
+            transition: opacity 0.5s ease;
+        }
+
+        .event2:hover {
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) .1);
+            opacity: 0.6;
+            transition: opacity 0.5s ease;
+        }
+
+        .event3:hover {
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) .1);
+            opacity: 0.6;
+            transition: opacity 0.5s ease;
+        }
+
+        .event1 h1:hover {
+            color: #25a554;
+        }
+
+        .event2 h1:hover {
+            color: #25a554;
+        }
+
+        .event3 h1:hover {
+            color: #25a554;
+        }
+
+        /* header 结束*/
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="index2.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#">发现音乐</a></li>
+                <li><a href="#">我的音乐</a></li>
+                <li><a href="#">关注</a></li>
+                <li><a href="#">商城</a></li>
+                <li><a href="#">音乐人</a></li>
+                <li><a href="#">下载客户端</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="    音乐/视频/电台/用户">
+        </div>
+        <div class="certor">
+            <a href="CZZ.html">创作者中心</a>
+        </div>
+        <div class="tx">
+            <ul>
+                <li><img src="img/TX1.jpg" alt="">
+                    <ul id="ul2">
+                        <li><a href="index2.html">我的主页</a></li>
+                        <li><a href="index.html">退出</a></li>
+                        <li><a href="#">我的消息</a></li>
+                        <li><a href="#" a>我的等级</a></li>
+                        <li><a href="#">VIP会员</a></li>
+                        <li><a href="#">个人设计</a></li>
+                        <li><a href="#">实名认证</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="red"></div>
+    <h1>创作者中心</h1>
+    <p>· 请选择身份进入管理平台 ·</p>
+    <div class="sing">
+        <!-- <h2>Upcoming Events</h2> -->
+        <div class="events">
+            <div class="event1">
+                <h2>March 14, 2021</h2>
+                <p>8:00 pm</p>
+                <h1>Sorry Babushka</h1>
+                <p class="last">1 East Plumb Branch St.Saint Petersburg, FL 33702</p>
+            </div>
+            <div class="event2">
+                <h2>March 16, 2021</h2>
+                <p>7:00 pm</p>
+                <h1>Big Daddy</h1>
+                <p class="last">71 Pilgrim Avenue Chevy Chase, MD 20815</p>
+            </div>
+            <div class="event3">
+                <h2>March 23, 2021</h2>
+                <p>9:30 pm</p>
+                <h1>Rocky Pub</h1>
+                <p class="last">514 S. Magnolia St. Orlando, FL 32806</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

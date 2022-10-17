@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .login {
+            overflow: hidden;
+            width: 600px;
+            height: 38px;
+            background-color: #2d2d2d;
+            border-radius: 3px 3px 0 0;
+            margin-top: 120px;
+            margin-left: 443px;
+            position: relative;
+        }
+
+        .login p {
+            display: inline-block;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 38px;
+            padding-left: 18px;
+        }
+
+        .login a {
+            color: #858585;
+            margin-left: 525px;
+        }
+
+        .ck {
+            overflow: hidden;
+            width: 600px;
+            height: 333px;
+            background-color: #ffffff;
+            margin-top: 0px;
+            margin-left: 443px;
+        }
+
+        .ck_k {
+            float: left;
+            width: 600px;
+            height: 250px;
+            margin-top: 38px;
+            /* background-color: cadetblue; */
+        }
+
+        .ck_k .left {
+            float: left;
+            display: inline-block;
+            width: 300px;
+            height: 225px;
+            /* background-color: salmon; */
+            border-right: 2px dashed #cccccc;
+        }
+
+        .ck_k .left img {
+            margin-left: 45px;
+        }
+
+        .ck_k .left input {
+            height: 20px;
+            width: 190px;
+            margin-left: 45px;
+            border-radius: 5px;
+            padding-left: 10px;
+            margin-top: 12px;
+        }
+        .ck_k .left a {
+            display: inline-block;
+            width: 119px;
+            height: 31px;
+            color: #fff;
+            margin-left: 45px;
+            border-radius: 5px;
+            line-height: 31px;
+            padding-left: 85px;
+            margin-top: 10px;
+            background-color: #428ed5;
+        }
+        .ck_k .left a:hover {
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) .1);
+            opacity: 0.6;
+            transition: opacity 0.5s ease;
+        }
+        /* .ck_k .left #sub {
+            width: 200px;
+            height: 31px;
+            color: #fff;
+            line-height: 0px;
+            padding-left: 0px;
+            background-color: #428ed5;
+        } */
+
+        .ck_k .zcl {
+            display: inline-block;
+            width: 150px;
+            height: 30px;
+            margin-left: 60px;
+            margin-top: 105px;
+            border-radius: 5px;
+            background-color: #e8ebf0;
+        }
+
+        .ck_k .zcl:hover {
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) .1);
+            opacity: 0.6;
+            transition: opacity 0.5s ease;
+        }
+
+        .ck_k .zcl a {
+            color: black;
+            font-size: 15px;
+            font-weight: 400;
+            padding-left: 57px;
+            line-height: 30px;
+        }
+
+        .ck .chose {
+            margin-left: 45px;
+        }
+
+        .ck .chose input,
+        p {
+            display: inline;
+            font-size: 10px;
+        }
+
+        .ck .chose a {
+            font-size: 10px;
+            color: #507DAF;
+        }
+
+        .ck .chose a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dl">
+        <div class="login">
+            <p>登录</p>
+            <a href="#" title="关闭窗口">x</a>
+        </div>
+        <div class="ck">
+            <div class="ck_k">
+                <div class="left">
+                    <img src="img/ckl.png" alt="">
+                    <form>
+                        <label for="textfield"></label>
+                        <input type="text" placeholder="请输入账号">
+                        <input type="password" placeholder="请输入密码">
+                        <a href="index2.html">登录</a>
+                        <!-- <input type="submit" value="登录" id="sub"> -->
+                    </form>
+                </div>
+                <div class="zcl">
+                    <a href="注册页面/zhuche.html">注 册</a>
+                </div>
+            </div>
+            <div class="chose">
+                <input type="checkbox">
+                <p>同意</p>
+                <a href="#">《服务条款》</a>
+                <a href="#">《隐私政策》</a>
+                <a href="#">《儿童隐私政策》</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
